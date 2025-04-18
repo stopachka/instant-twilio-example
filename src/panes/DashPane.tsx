@@ -1,3 +1,3 @@
 export default function DashPane() {
-  return <div>Hello!</div>;
+  return <div>Hello! You are logged in</div>;
 }

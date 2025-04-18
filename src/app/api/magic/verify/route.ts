@@ -35,7 +35,9 @@ export async function POST(req: NextRequest) {
     }
 
     const token = await adminDB.auth.createToken(
-      `${phoneNumber}@auth.penguin.is`
+      // This email doesn't need to exist.
+      // Instant just requires an email to create a taken.
+      `${phoneNumber}@yourdomain.com`
     );
     return NextResponse.json({ success: true, token: token });
   } catch (error: any) {
